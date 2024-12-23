@@ -7,14 +7,14 @@ COLL_SRC=Colleen/Colleen.c
 GRACE_SRC=Grace/Grace.c
 SULLY_SRC=Sully/Sully.c
 
-COLL_OBJ=$(COLL_SRC:%.c=%.o)
-GRACE_OBJ=$(GRACE_SRC:%.c=%.o)
-SULLY_OBJ=$(SULLY_SRC:%.c=%.o)
+COLL_OBJ=$(COLL_SRC:Colleen/%.c=Colleen/%.o)
+GRACE_OBJ=$(GRACE_SRC:Grace/%.c=Grace/%.o)
+SULLY_OBJ=$(SULLY_SRC:Sully/%.c=Sully/%.o)
 
 
-COLL_BIN=Colleen
-GRACE_BIN=Grace
-SULLY_BIN=Sully
+COLL_BIN=Colleen/Colleen
+GRACE_BIN=Grace/Grace
+SULLY_BIN=Sully/Sully
 
 
 
@@ -51,7 +51,7 @@ clean:
 	@rm -f $(COLL_OBJ) $(GRACE_OBJ) $(SULLY_OBJ)
 
 fclean: clean
-	@rm -f $(COLL_BIN) $(GRACE_BIN) $(SULLY_BIN)
+	@rm -f $(COLL_BIN) $(GRACE_BIN) Grace/grace_kid.c $(SULLY_BIN) Sully/Sully_{4,3,2,1,0}{,.c}
 
 re: fclean all
 
